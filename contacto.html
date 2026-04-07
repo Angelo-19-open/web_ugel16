@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - UGEL 16 Barranca</title>
+    <link rel="icon" type="image/png" href="img/ugel normal.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="./STYLE/style.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <section class="contenido">
+        <main class="main-contacto">
+            <section class="banner-municipal-full" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('img/contacta.jpg');">
+                <div class="nosotros-container container-banner-relativo">
+                    <a href="index.html" class="btn-regresar-banner">
+                        <i class="fas fa-arrow-left"></i> Volver al Inicio
+                    </a>
+                    <div class="banner-text">
+                        <span class="sub-titulo">Atención al Ciudadano</span>
+                        <h1>Contáctanos</h1>
+                        <p>Estamos para atenderte. Envíanos un mensaje o visítanos en nuestra sede.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="seccion-contacto-info">
+                <div class="nosotros-container">
+                    <div class="grid-contacto-layout">
+                        
+                        <div class="tarjeta-blanca-contacto">
+                            <div class="form-header-minimal">
+                                <h2>Envíanos un mensaje</h2>
+                                <p></p>
+                            </div>
+                            
+                            <form id="fs-frm" action="https://formspree.io/f/xvzvgnwd" method="POST" class="form-ugel-moderno">
+    <div class="fila-input-doble">
+        <div class="control-input">
+            <label>Nombre completo *</label>
+            <input type="text" name="nombre" placeholder="Tu nombre" required>
+        </div>
+        <div class="control-input">
+            <label>Correo electrónico *</label>
+            <input type="email" name="email" placeholder="ejemplo@correo.com" required>
+        </div>
+    </div>
+
+    <div class="fila-input-doble">
+        <div class="control-input">
+            <label>Teléfono (Opcional)</label>
+            <input type="text" name="telefono" placeholder="999 999 999">
+        </div>
+        <div class="control-input">
+            <label>Asunto</label>
+            <select name="asunto">
+                <option value="Consultas Administrativas">Consultas Administrativas</option>
+                <option value="Escalafon / Planillas">Escalafón / Planillas</option>
+                <option value="Soporte Tecnico">Soporte Técnico</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="control-input full-width">
+        <label>Mensaje *</label>
+        <textarea name="mensaje" rows="5" placeholder="¿En qué podemos ayudarte?" required></textarea>
+    </div>
+
+    <div class="contenedor-boton-centro">
+        <button type="submit" id="btn-enviar" class="btn-enviar-moderno-full">
+            Enviar Mensaje <i class="fas fa-paper-plane"></i>
+        </button>
+    </div>
+    
+    <p id="status-mensaje" style="text-align:center; margin-top:15px; font-weight:600;"></p>
+</form>
+                        </div>
+
+                        <div class="tarjeta-mapa-cuadrada">
+                            <div class="mapa-full-fill">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13086.113999885483!2d-77.769864!3d-10.7568455!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x910737f860d18af1%3A0x7e9d7a2c9d28b88c!2sUGEL%20N%C2%AA%2016%20BARRANCA!5e1!3m2!1ses!2spe!4v1774538374128!5m2!1ses!2spe" width="580" height="540" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </main>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="./JS/menu.js"></script>
+    <script src="./JS/menu-movil.js"></script>
+    <script src="./JS/load-footer.js"></script>
+    <script src="./JS/campos.js"></script>
+</body>
+</html>
