@@ -1970,11 +1970,62 @@ body {
 }
 
 /* Mobile */
+/* --- RESPONSIVO PARA OFICINAS (MEJORADO) --- */
 @media (max-width: 768px) {
-    .titulo-moderno-centrado h2 { font-size: 32px; }
-    .tarjeta-info { width: 92%; padding: 20px; }
-}
+    /* 1. Achicamos el título principal de la página */
+    .titulo-moderno-centrado {
+        margin-bottom: 40px !important; /* Reducimos el espacio de 90px a 40px */
+    }
 
+    .titulo-moderno-centrado h2 {
+        font-size: 26px !important; /* De 48px a 26px para que no se corte */
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    .sub-tag {
+        letter-spacing: 2px; /* Menos espacio entre letras para que quepa */
+        font-size: 10px;
+    }
+
+    /* 2. Ajustamos el Grid para que no haya huecos gigantes entre oficinas */
+    .grid-vanguardia {
+        grid-template-columns: 1fr !important; /* Una sola columna */
+        gap: 50px 20px !important; /* Reducimos el hueco de 100px a 50px */
+        padding: 0 15px;
+    }
+
+    /* 3. La imagen de la oficina un poco más pequeña en el celu */
+    .contenedor-imagen {
+        height: 200px !important;
+        border-radius: 20px;
+    }
+
+    /* 4. La tarjeta de información (la que flota) */
+    .tarjeta-info {
+        width: 90% !important; /* Que ocupe casi todo el ancho */
+        margin: -40px auto 0 auto !important; /* Que suba menos para no tapar tanto la foto */
+        padding: 20px !important;
+        border-radius: 15px;
+    }
+
+    .tarjeta-info h3 {
+        font-size: 18px !important;
+        margin-bottom: 8px;
+    }
+
+    .tarjeta-info p {
+        font-size: 13px !important;
+        line-height: 1.5;
+    }
+
+    /* 5. El número de fondo (01, 02...) lo achicamos o quitamos */
+    .nro-oficina {
+        font-size: 30px !important;
+        right: 15px;
+        top: 10px;
+    }
+}
 /****************FIN DE OFICINAS**************************************************************************************************************************************/
 
 
@@ -2626,13 +2677,43 @@ input[name="slider"] { display: none; }
 }
 
 /* Móvil */
-@media (max-width: 992px) {
-    .grid-contacto-layout { grid-template-columns: 1fr; }
-    .fila-input-doble { grid-template-columns: 1fr; }
-    .tarjeta-mapa-cuadrada { aspect-ratio: auto; height: 400px; }
+/* --- RESPONSIVO PARA CONTACTO (OPTIMIZADO) --- */
+/* --- RESPONSIVO PARA CONTACTO (ÚNICO Y FINAL) --- */
+@media (max-width: 768px) {
+    /* Forzamos el orden: Formulario (1) arriba, Mapa (2) abajo */
+    .grid-contacto-layout {
+        display: flex !important;
+        flex-direction: column !important; 
+        gap: 25px !important;
+        padding: 10px;
+    }
+
+    .tarjeta-blanca-contacto {
+        width: 100% !important;
+        padding: 25px 20px !important;
+        order: 1; /* Primero */
+    }
+
+    .tarjeta-mapa-cuadrada {
+        width: 100% !important;
+        height: 350px !important; 
+        aspect-ratio: auto !important;
+        order: 2; /* Segundo */
+    }
+
+    /* Inputs uno debajo del otro */
+    .fila-input-doble {
+        grid-template-columns: 1fr !important;
+        gap: 15px;
+    }
+
+    /* Botón a todo lo ancho */
+    .btn-enviar-moderno-full {
+        width: 100%;
+        justify-content: center;
+        padding: 15px !important;
+    }
 }
-
-
 
 
 
